@@ -12,6 +12,12 @@
 
 **Thoughts:** -
 
+### Day 2: 22.04.2020
+
+**Today's Progress**: Setup axios. fix problems with npm. test how it's works
+
+**Thoughts:** -
+
 
 
 
