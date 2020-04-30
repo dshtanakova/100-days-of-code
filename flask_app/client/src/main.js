@@ -6,11 +6,12 @@ import 'vuesax/dist/vuesax.css';
 import App from './App.vue';
 import router from './router';
 
+
 Vue.use(Vuesax, {
   // options here
 });
-
 Vue.use(BootstrapVue);
+
 
 Vue.config.productionTip = false;
 

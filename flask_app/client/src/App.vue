@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <navbar/>
-    <router-vue/>
+    <router-view/>
   </div>
 </template>
 
@@ -30,7 +30,7 @@ export default {
   margin-top: 60px;
 }
 body {
-  background: red
+  background: #c4dbd6
 }
 </style>
 
