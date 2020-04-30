@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <navigation/>
-    <router-view/>
+    <navbar/>
+    <router-vue/>
   </div>
 </template>
 
 
 <script>
 
-import Navigation from './components/Navigation.vue' 
+import Navigation from './components/Navigation';
 
 export default {
   name: 'app',
   components: {
-    Navigation
+    "navbar": Navigation
   }
 }
 
@@ -29,4 +29,8 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+body {
+  background: red
+}
 </style>
+

@@ -1,11 +1,16 @@
 <template>
   <div>
-    <h2>Nav Bar</h2>
-    <nav>
-      <router-link v-for="routes in links" 
-      v-bind:key="routes.id"
-      :to="`${routes.page}`">{{routes.text}}</router-link>
-    </nav>
+    <vs-navbar v-model="activeItem" class="nabarx">
+      <div slot="title">
+        <vs-navbar-title>
+          Hello world
+        </vs-navbar-title>
+      </div>
+
+      <vs-navbar-item :index="index" v-for="(routes, index) in links" :key="index">
+        <router-link :to="`${routes.page}`">{{routes.text}}</router-link>
+      </vs-navbar-item>
+    </vs-navbar>
   </div>
 
 
@@ -14,30 +19,31 @@
 <script>
 export default {
   name: 'Navigation',
-  data() {
+  data(){
     return {
+      activeItem: false,
       links: [
-        {
-          id: 0,
-          text: 'Hello World',
-          page:'/HelloWorld'
-        },
-        {
-          id: 1,
-          text: 'Home',
-          page:'/Home'
-        },
-        {
-          id: 2,
-          text: 'About',
-          page:'/About'
-        },
-        {
-          id: 3,
-          text: 'Contact',
-          page:'/Contact'
-        }
-      ]
+          {
+            id: 0,
+            text: 'Hello World',
+            page:'/HelloWorld'
+          },
+          {
+            id: 1,
+            text: 'Home',
+            page:'/Home'
+          },
+          {
+            id: 2,
+            text: 'About',
+            page:'/About'
+          },
+          {
+            id: 3,
+            text: 'Contact',
+            page:'/Contact'
+          }
+        ]
     }
   }
 }
