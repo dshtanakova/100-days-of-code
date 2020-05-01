@@ -8,7 +8,7 @@
       </div>
 
       <vs-navbar-item :index="index" v-for="(routes, index) in links" :key="index">
-        <router-link :to="`${routes.page}`">{{routes.text}}</router-link>
+        <router-link :to="routes.page">{{routes.text}}</router-link>
       </vs-navbar-item>
     </vs-navbar>
   </div>
@@ -31,7 +31,7 @@ export default {
           {
             id: 1,
             text: 'Home',
-            page:'/Home'
+            page:'/'
           },
           {
             id: 2,
